@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet Andrea Littlewood — the person behind LittleWoofs. Her story, values, qualifications and why she started her dog walking business in Thamesmead.">
+  <title>About Andrea — LittleWoofs Dog Walking</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--grass-light) 0%, var(--sky-light) 100%);
+      padding: 4.5rem 0 3.5rem;
+    }
+    .page-hero-inner {
+      max-width: 1080px; margin: 0 auto; padding: 0 2rem;
+      display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: center;
+    }
+    .about-photo-col { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+    .photo-frame {
+      width: 100%; max-width: 300px;
+      background: linear-gradient(145deg, var(--grass-light), var(--coral-light));
+      border-radius: 30px 80px 30px 80px;
+      padding: 1.5rem; display: flex; flex-direction: column;
+      align-items: center; gap: 1rem; border: 2px dashed var(--border);
+    }
+    .photo-frame img {
+      width: 220px; height: 260px; object-fit: cover;
+      border-radius: 20px 60px 20px 60px;
+    }
+    .photo-frame .ph {
+      width: 220px; height: 260px;
+      background: var(--white); border-radius: 20px 60px 20px 60px;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 0.5rem; border: 2px dashed var(--border);
+      color: var(--grass-dark); font-size: 0.78rem; font-weight: 700; text-align: center; padding: 1rem;
+    }
+    .cert-card-small {
+      background: var(--white); border-radius: var(--r-md);
+      padding: 1rem 1.25rem; border: 1.5px solid var(--border);
+      box-shadow: var(--shadow-sm); width: 100%; max-width: 300px; text-align: center;
+    }
+    .cert-card-small .cert-org {
+      font-size: 0.65rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 1.5px; color: #1a3a6b; margin-bottom: 0.25rem;
+    }
+    .cert-card-small .cert-name { font-size: 1rem; font-weight: 900; color: var(--dark); }
+    .cert-card-small .cert-course { font-size: 0.78rem; color: var(--text-muted); font-family: 'Lora', serif; margin: 0.2rem 0; }
+    .cert-card-small .cert-date { font-size: 0.72rem; color: var(--grass); font-weight: 700; }
+    .cert-card-small a { font-size: 0.72rem; color: var(--sky-dark); font-weight: 700; text-decoration: none; }
+
+    .about-story h1 { margin-bottom: 1rem; }
+    .about-story h1 em { font-style: normal; color: var(--grass); }
+    .story-block {
+      background: var(--white); border-left: 4px solid var(--grass);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      padding: 1.25rem 1.5rem; margin-bottom: 1rem;
+      font-family: 'Lora', serif; font-size: 0.95rem; line-height: 1.8;
+      border-right: 1px solid var(--border); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .story-block.coral { border-left-color: var(--coral); }
+    .story-block.sky   { border-left-color: var(--sky); }
+
+    /* VALUES */
+    .values-section { background: var(--cream); }
+    .values-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.25rem;
+    }
+    .value-card {
+      background: var(--white); border-radius: var(--r-lg); padding: 1.75rem;
+      border: 1.5px solid var(--border); box-shadow: var(--shadow-sm);
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .value-icon { font-size: 2rem; }
+    .value-card h4 { font-size: 0.95rem; margin: 0; }
+    .value-card p  { font-size: 0.82rem; line-height: 1.65; }
+
+    /* QUALS */
+    .quals-section { background: var(--sky-light); }
+    .quals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+    .qual-card {
+      background: var(--white); border-radius: var(--r-lg); padding: 1.5rem; text-align: center;
+      border: 1.5px solid var(--border); box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .qual-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .qual-icon { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    .qual-card h4 { font-size: 0.9rem; margin-bottom: 0.25rem; }
+    .qual-card p   { font-size: 0.78rem; line-height: 1.6; }
+    .qual-date { font-size: 0.7rem; font-weight: 700; color: var(--grass); margin-top: 0.3rem; }
+
+    @media (max-width: 768px) {
+      .page-hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-photo-col { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="about-photo-col">
+      <div class="photo-frame">
+        <!-- ✏️ Replace with: <img src="images/andrea-photo.jpg" alt="Andrea Littlewood with one of her walking dogs"> -->
+        <div class="ph">
+          📷 Add your photo here!<br>
+          <span style="font-weight:400;opacity:0.7">A friendly shot with one of your dogs works perfectly</span>
+          <div class="edit-note" style="margin-top:0.5rem;">Or use the Facebook page image</div>
+        </div>
+      </div>
+      <div class="cert-card-small">
+        <div class="cert-org">Modern Dog Walkers Association</div>
+        <div class="cert-name">Andrea Littlewood</div>
+        <div class="cert-course">Professional Dog Walker<br>Certification Assessment — Passed</div>
+        <div class="cert-date">🏅 21 February 2026</div>
+        <br>
+        <a href="images/MDWA_Certificate_of_Achievement.png" target="_blank">View certificate ↗</a>
+      </div>
+    </div>
+
+    <div class="about-story">
+      <span class="section-label">About Andrea</span>
+      <h1>From spreadsheets<br>to <em>lead ropes</em></h1>
+
+      <div class="story-block">
+        After years working in data analytics, redundancy could have felt like the end of something. For Andrea, it turned out to be the best beginning. Rather than diving straight back into job hunting — all the uncertainty, the waiting, the rejections — she decided to do something for herself instead.
+        <div class="edit-note">✏️ Andrea — add your own voice here. What did you feel when you were made redundant? What made you decide to go for it?</div>
+      </div>
+
+      <div class="story-block coral">
+        A chance encounter at an airport, on her way to a holiday in Spain, changed everything. Andrea got talking to a man who'd been through something very similar — made redundant, unsure what was next — and discovered he was now a full-time, thriving dog walker. He handed over his card: "Let's connect after our holidays. I'll tell you everything I did."
+        <div class="edit-note">✏️ You can add his name here if you'd like — or keep it as a lovely anonymous detail. Up to you!</div>
+      </div>
+
+      <div class="story-block sky">
+        She came back from holiday, made the call, got certified with the Modern Dog Walkers Association, and started building LittleWoofs — one dog at a time. She now walks five dogs regularly, all from her local community in Thamesmead.
+        <div class="edit-note">✏️ Tell us about some of your dogs! Even first names and breeds make this feel so warm and real.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VALUES -->
+<section class="values-section" aria-labelledby="values-heading">
+  <div class="container">
+    <span class="section-label">What I believe in</span>
+    <h2 class="section-title" id="values-heading">The LittleWoofs way</h2>
+    <p class="section-sub">These aren't just words. They're the standards Andrea holds herself to on every single walk.</p>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🌿</div>
+        <h4>Welfare first, always</h4>
+        <p>Every decision is made with the dog's physical and emotional wellbeing in mind. Not convenience. Not cost. The dog, first.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h4>Positive handling only</h4>
+        <p>No harsh corrections, no punishment-based methods. Patient, kind, and encouraging — every time.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔒</div>
+        <h4>Safety and reliability</h4>
+        <p>You'll always know when Andrea has collected and returned your dog. She doesn't cancel, doesn't cut walks short, and doesn't disappear.</p>
+        <div class="edit-note">✏️ Is this true? Confirm — reliability is one of your strongest selling points.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">💬</div>
+        <h4>Honest communication</h4>
+        <p>If something happens on a walk — good or bad — you'll hear about it. No surprises, no cover-ups, just honest updates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALIFICATIONS -->
+<section class="quals-section" aria-labelledby="quals-heading">
+  <div class="container">
+    <span class="section-label">Qualifications &amp; training</span>
+    <h2 class="section-title" id="quals-heading">Properly trained, properly certified</h2>
+    <p class="section-sub">Andrea takes her professional development seriously. Here are the credentials behind LittleWoofs.</p>
+    <div class="quals-grid">
+      <div class="qual-card">
+        <div class="qual-icon">🏅</div>
+        <h4>MDWA Professional Dog Walker</h4>
+        <p>Passed the Modern Dog Walkers Association Professional Certification Assessment — covering dog behaviour, welfare, safety and business practice.</p>
+        <div class="qual-date">Awarded 21 February 2026</div>
+      </div>
+      <div class="qual-card">
+        <div class="qual-icon">🛡️</div>
+        <h4>Fully insured</h4>
+        <p>LittleWoofs carries full professional dog walking insurance for your complete peace of mind.</p>
+        <div class="edit-note">✏️ Add your insurance provider name here — it adds real credibility.</div>
+      </div>
+      <div class="qual-card">
+        <div class="qual-icon">🩺</div>
+        <h4>Pet first aid</h4>
+        <p>Trained in pet first aid so that in the unlikely event of an emergency, Andrea knows what to do.</p>
+        <div class="edit-note">✏️ Do you have a first aid cert? If yes, add the provider. If not, consider getting one — it's a great selling point!</div>
+      </div>
+      <div class="qual-card">
+        <div class="qual-icon">📋</div>
+        <h4>DBS checked</h4>
+        <p>Enhanced DBS check completed — giving you confidence that the person coming to your home is who they say they are.</p>
+        <div class="edit-note">✏️ Do you have a DBS check? If not, this is worth organising — clients with children especially ask about this.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--dark);padding:4rem 0;text-align:center;" aria-labelledby="about-cta">
+  <div class="container">
+    <h2 id="about-cta" style="color:var(--white);margin-bottom:0.75rem;">Want to meet Andrea and your dog?</h2>
+    <p style="font-family:'Lora',serif;color:rgba(255,255,255,0.6);margin-bottom:2rem;font-size:1.05rem;">Every booking starts with a free, no-obligation meet-and-greet at your home.</p>
+    <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-primary">Get in touch</a>
+      <a href="https://wa.me/447810350376" class="btn btn-whatsapp" target="_blank">WhatsApp Andrea</a>
+    </div>
+  </div>
+</section>
+
+<script src="js/components.js"></script>
+<script>buildPage('about.html');</script>
+</body>
+</html>

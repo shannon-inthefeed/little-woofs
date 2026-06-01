@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to get started with LittleWoofs dog walking — the onboarding process from first contact to regular walks.">
+  <title>How It Works — LittleWoofs Dog Walking</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-header { background: linear-gradient(135deg, var(--sky-light), var(--grass-light)); padding: 4rem 0 3rem; text-align: center; }
+    .onboarding-section { background: var(--cream); }
+    .steps-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 3.5rem; }
+    .steps-nav { position: sticky; top: 90px; }
+    .step-nav-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.65rem 0; border-bottom: 1px solid var(--border-light);
+      font-size: 0.84rem; font-weight: 700; color: var(--text-muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .step-nav-item:hover { color: var(--grass-dark); }
+    .step-num-small {
+      width: 28px; height: 28px; border-radius: 50%; background: var(--grass-light);
+      color: var(--grass-dark); font-size: 0.78rem; font-weight: 900;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .steps-main {}
+    .step-block {
+      display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem; border-bottom: 1px solid var(--border);
+    }
+    .step-block:last-child { border-bottom: none; }
+    .step-circle {
+      width: 52px; height: 52px; border-radius: 50%; background: var(--grass);
+      color: var(--white); font-weight: 900; font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .step-content h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+    .step-content p  { font-size: 0.9rem; line-height: 1.75; font-family: 'Lora', serif; margin-bottom: 0.5rem; }
+    .step-detail {
+      background: var(--white); border-radius: var(--r-md); padding: 1rem 1.25rem;
+      border: 1.5px solid var(--border); margin-top: 0.75rem;
+      font-size: 0.82rem; color: var(--text-muted);
+    }
+    .step-detail ul { list-style: none; }
+    .step-detail li { padding: 0.2rem 0; display: flex; align-items: flex-start; gap: 0.5rem; }
+    .step-detail li::before { content: "✔"; color: var(--grass); font-weight: 900; flex-shrink: 0; }
+    @media (max-width: 768px) { .steps-layout { grid-template-columns: 1fr; } .steps-nav { position: static; } }
+  </style>
+</head>
+<body>
+<div class="page-header">
+  <div class="container">
+    <span class="section-label">Getting started</span>
+    <h1>How it works</h1>
+    <p style="font-family:'Lora',serif;color:var(--text-muted);max-width:500px;margin:0 auto;">A clear, simple process so you know exactly what to expect — no guessing, no surprises.</p>
+  </div>
+</div>
+
+<section class="onboarding-section">
+  <div class="container">
+    <div class="steps-layout">
+      <div class="steps-nav">
+        <p style="font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:0.5rem;">Steps</p>
+        <a class="step-nav-item" href="#step1"><div class="step-num-small">1</div> Get in touch</a>
+        <a class="step-nav-item" href="#step2"><div class="step-num-small">2</div> Free meet-and-greet</a>
+        <a class="step-nav-item" href="#step3"><div class="step-num-small">3</div> Trial walk</a>
+        <a class="step-nav-item" href="#step4"><div class="step-num-small">4</div> Paperwork &amp; keys</a>
+        <a class="step-nav-item" href="#step5"><div class="step-num-small">5</div> Regular walks begin</a>
+        <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);">
+          <a href="contact.html" class="btn btn-primary" style="font-size:0.82rem;padding:0.6rem 1.2rem;display:flex;justify-content:center;">Start here →</a>
+        </div>
+      </div>
+
+      <div class="steps-main">
+        <div class="step-block" id="step1">
+          <div class="step-circle">1</div>
+          <div class="step-content">
+            <h3>Get in touch</h3>
+            <p>The first step is the easiest — just say hello. Message Andrea on WhatsApp (07810 350376), send an email to littlewoofs24@gmail.com, or use the contact form on this website.</p>
+            <p>She'll get back to you within 24 hours for a brief chat about your dog, your routine, and whether she has availability in your area.</p>
+            <div class="step-detail">
+              <ul>
+                <li>No commitment required at this stage</li>
+                <li>Just a friendly chat to see if we're a good fit</li>
+                <li>WhatsApp is the quickest option</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-block" id="step2">
+          <div class="step-circle">2</div>
+          <div class="step-content">
+            <h3>Free meet-and-greet (at your home)</h3>
+            <p>If things sound good on paper, Andrea will come to meet you and your dog at home — completely free, no obligation whatsoever. This is one of the most important parts of the process.</p>
+            <div class="step-detail">
+              <ul>
+                <li>Takes approximately 30–45 minutes</li>
+                <li>Andrea meets your dog in their own environment</li>
+                <li>Goes through a questionnaire covering routine, diet, health and behaviour</li>
+                <li>Discusses emergency contacts and vet details</li>
+                <li>Answers any questions you have</li>
+                <li>No pressure — both sides decide if it feels right</li>
+              </ul>
+            </div>
+            <div class="edit-note">✏️ Adjust the duration and detail to match what you actually do at a meet-and-greet.</div>
+          </div>
+        </div>
+
+        <div class="step-block" id="step3">
+          <div class="step-circle">3</div>
+          <div class="step-content">
+            <h3>Trial walk</h3>
+            <p>Before regular walks begin, Andrea arranges a trial walk so your dog can get comfortable with her and the routine. There's no rush — if your dog needs more than one settle-in session, that's absolutely fine.</p>
+            <div class="step-detail">
+              <ul>
+                <li>First walk is either solo or a very small group</li>
+                <li>Gives your dog a chance to build trust gradually</li>
+                <li>Andrea assesses how your dog walks on the lead, around other dogs, and in new environments</li>
+                <li>You receive a detailed update afterwards</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-block" id="step4">
+          <div class="step-circle">4</div>
+          <div class="step-content">
+            <h3>Paperwork &amp; key handover</h3>
+            <p>Once both parties are happy, Andrea sorts out the simple admin so everything is above board and organised. This is where her background in data and systems really shines — nothing falls through the cracks.</p>
+            <div class="step-detail">
+              <ul>
+                <li>Service agreement signed by both parties</li>
+                <li>Emergency contact and vet details confirmed</li>
+                <li>Key handed over (kept securely)</li>
+                <li>Payment method agreed</li>
+                <li>Walking schedule set</li>
+              </ul>
+            </div>
+            <div class="edit-note">✏️ Do you have downloadable forms ready? Add a PDF link here once you do: e.g. "Download the service agreement (PDF)"</div>
+          </div>
+        </div>
+
+        <div class="step-block" id="step5">
+          <div class="step-circle">5</div>
+          <div class="step-content">
+            <h3>Regular walks begin!</h3>
+            <p>You're all set. Andrea will collect your dog, walk them in a small, safe group, and send you a photo and update after every single walk — so you always know your dog is happy.</p>
+            <div class="step-detail">
+              <ul>
+                <li>Regular collection time agreed in advance</li>
+                <li>Photo and update after every walk</li>
+                <li>Any changes or concerns communicated immediately</li>
+                <li>Andrea available on WhatsApp for any queries</li>
+              </ul>
+            </div>
+            <div class="edit-note">✏️ Confirm your update method — WhatsApp photo? Any other app or system you use?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--grass);padding:3.5rem 0;text-align:center;">
+  <div class="container">
+    <h2 style="color:var(--white);margin-bottom:0.5rem;">Ready to get started?</h2>
+    <p style="color:rgba(255,255,255,0.8);font-family:'Lora',serif;margin-bottom:1.75rem;">Step 1 is just saying hello — no commitment, no pressure.</p>
+    <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+      <a href="contact.html" class="btn" style="background:var(--white);color:var(--grass-dark);">Send an enquiry →</a>
+      <a href="https://wa.me/447810350376" class="btn btn-whatsapp" target="_blank">WhatsApp Andrea</a>
+    </div>
+  </div>
+</section>
+
+<script src="js/components.js"></script>
+<script>buildPage('onboarding.html');</script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with LittleWoofs dog walking in Thamesmead. Contact Andrea Littlewood via the enquiry form or WhatsApp on 07810 350376.">
+  <title>Contact — LittleWoofs Dog Walking</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-hero {
+      background: linear-gradient(135deg, var(--dark) 0%, #1e3a2a 100%);
+      padding: 4rem 0 3rem; text-align: center;
+    }
+    .contact-hero h1 { color: var(--white); margin-bottom: 0.75rem; }
+    .contact-hero p  { font-family: 'Lora', serif; color: rgba(255,255,255,0.65); font-size: 1.05rem; }
+
+    .contact-body { background: var(--cream); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.4fr; gap: 3.5rem; align-items: start;
+    }
+
+    /* LEFT: info column */
+    .contact-info-col {}
+    .contact-info-col h2 { font-size: 1.3rem; margin-bottom: 1.25rem; }
+    .ci-item {
+      display: flex; align-items: flex-start; gap: 0.85rem;
+      margin-bottom: 1.25rem; padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .ci-item:last-of-type { border-bottom: none; }
+    .ci-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .ci-label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.2rem; }
+    .ci-value { font-size: 0.95rem; font-weight: 700; color: var(--dark); }
+    .ci-value a { color: var(--grass-dark); text-decoration: none; }
+    .ci-value a:hover { text-decoration: underline; }
+    .ci-sub  { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; font-family: 'Lora', serif; }
+
+    .contact-btns { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; }
+    .contact-btns .btn { justify-content: center; text-align: center; }
+
+    .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin-top: 0.5rem; }
+    .hours-row { font-size: 0.8rem; color: var(--text-muted); }
+    .hours-row strong { color: var(--text); }
+
+    /* RIGHT: form column */
+    .contact-form-col {
+      background: var(--white); border-radius: var(--r-lg); padding: 2.25rem;
+      border: 1.5px solid var(--border); box-shadow: var(--shadow-md);
+    }
+    .contact-form-col h2 { font-size: 1.2rem; margin-bottom: 0.25rem; }
+    .contact-form-col .form-sub { font-size: 0.85rem; color: var(--text-muted); font-family: 'Lora', serif; margin-bottom: 1.75rem; }
+
+    .form-group { margin-bottom: 1.1rem; }
+    .form-group label {
+      display: block; font-size: 0.76rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 0.35rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; padding: 0.75rem 1rem;
+      background: var(--cloud); border: 1.5px solid var(--border);
+      border-radius: var(--r-sm); font-family: 'Nunito', sans-serif;
+      font-size: 0.9rem; color: var(--text);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none; border-color: var(--grass); background: var(--white);
+    }
+    .form-group textarea { min-height: 110px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+    .form-hint { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.25rem; font-family: 'Lora', serif; }
+
+    .submit-btn {
+      width: 100%; padding: 1rem; background: var(--grass); color: var(--white);
+      border: none; border-radius: var(--r-pill); font-family: 'Nunito', sans-serif;
+      font-size: 1rem; font-weight: 800; cursor: pointer; transition: all 0.2s;
+      margin-top: 0.5rem;
+    }
+    .submit-btn:hover { background: var(--grass-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    .submit-btn:disabled { background: var(--text-light); cursor: not-allowed; transform: none; }
+
+    .success-msg {
+      display: none; background: var(--grass-light); border: 1.5px solid var(--grass);
+      border-radius: var(--r-md); padding: 1.25rem; text-align: center;
+      color: var(--grass-dark); font-weight: 700; margin-top: 1rem;
+    }
+
+    /* PRIVACY NOTE */
+    .privacy-note {
+      font-size: 0.72rem; color: var(--text-muted); text-align: center;
+      margin-top: 0.75rem; font-family: 'Lora', serif; line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="contact-hero">
+  <div class="container">
+    <span class="section-label" style="color:var(--grass);">Get in touch</span>
+    <h1>Let's talk about your dog 🐾</h1>
+    <p>A free meet-and-greet is how every booking starts — no pressure, no commitment.</p>
+  </div>
+</div>
+
+<section class="contact-body" aria-labelledby="contact-h">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- INFO COL -->
+      <div class="contact-info-col">
+        <h2>Andrea Littlewood<br><span style="color:var(--grass);">LittleWoofs</span></h2>
+
+        <div class="ci-item">
+          <span class="ci-icon">📱</span>
+          <div>
+            <div class="ci-label">Phone / WhatsApp</div>
+            <div class="ci-value"><a href="tel:+447810350376">07810 350376</a></div>
+            <div class="ci-sub">WhatsApp is the quickest way to reach Andrea — usually responds same day.</div>
+          </div>
+        </div>
+
+        <div class="ci-item">
+          <span class="ci-icon">✉️</span>
+          <div>
+            <div class="ci-label">Email</div>
+            <div class="ci-value"><a href="mailto:littlewoofs24@gmail.com">littlewoofs24@gmail.com</a></div>
+            <div class="ci-sub">Andrea checks email daily. Expect a reply within 24 hours.</div>
+          </div>
+        </div>
+
+        <div class="ci-item">
+          <span class="ci-icon">📍</span>
+          <div>
+            <div class="ci-label">Service Area</div>
+            <div class="ci-value">Thamesmead, Barking &amp; Dagenham</div>
+            <div class="ci-sub">Also covers Abbey Wood, Plumstead and surrounding areas. Not sure? Just ask!</div>
+            <div class="edit-note" style="margin-top:0.5rem;">✏️ Add specific postcodes if you'd like (e.g. SE2, DA18, RM8, RM9, RM10)</div>
+          </div>
+        </div>
+
+        <div class="ci-item">
+          <span class="ci-icon">🕐</span>
+          <div>
+            <div class="ci-label">Walking Hours</div>
+            <div class="hours-grid">
+              <div class="hours-row"><strong>Mon–Fri</strong><br>8am – 5pm</div>
+              <div class="hours-row"><strong>Weekends</strong><br>
+                <span style="color:var(--coral-dark);">✏️ Do you walk weekends?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-btns">
+          <a href="https://wa.me/447810350376?text=Hi%20Andrea!%20I%27d%20love%20to%20find%20out%20more%20about%20LittleWoofs%20dog%20walking." class="btn btn-whatsapp" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M5.04 23.444l.635-2.319A10.985 10.985 0 0 1 1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11a10.963 10.963 0 0 1-5.251-1.337l-2.709.781z" stroke="white" stroke-width="0.5" fill="none"/></svg>
+            WhatsApp Andrea now
+          </a>
+          <a href="https://www.facebook.com/LittleWoofsThamesmead/" class="btn btn-facebook" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Find us on Facebook
+          </a>
+          <a href="mailto:littlewoofs24@gmail.com" class="btn btn-outline">
+            ✉️ Email Andrea
+          </a>
+        </div>
+      </div>
+
+      <!-- FORM COL -->
+      <div class="contact-form-col">
+        <h2>Send an enquiry</h2>
+        <p class="form-sub">Fill this in and Andrea will get back to you within 24 hours to arrange a free meet-and-greet.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="your-name">Your name *</label>
+              <input type="text" id="your-name" name="name" placeholder="e.g. Sarah" required>
+            </div>
+            <div class="form-group">
+              <label for="dog-name">Your dog's name *</label>
+              <input type="text" id="dog-name" name="dog_name" placeholder="e.g. Biscuit" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email address *</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" placeholder="07XXX XXXXXX">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="breed">Breed &amp; age</label>
+              <input type="text" id="breed" name="breed" placeholder="e.g. Cockapoo, 2 yrs">
+            </div>
+            <div class="form-group">
+              <label for="postcode">Your postcode</label>
+              <input type="text" id="postcode" name="postcode" placeholder="e.g. SE2 9RQ">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service you're interested in</label>
+            <select id="service" name="service">
+              <option value="">Select a service…</option>
+              <option value="group">Group Dog Walk (£12)</option>
+              <option value="solo">Solo Dog Walk (£15)</option>
+              <option value="dropin">Drop-In Visit (£10)</option>
+              <option value="unsure">Not sure — let's have a chat!</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell me about your dog *</label>
+            <textarea id="message" name="message" required
+              placeholder="Anything about their personality, routine, any health needs, whether they're good with other dogs — whatever feels relevant! Don't worry about oversharing."></textarea>
+            <p class="form-hint">The more you tell Andrea, the better she can help. There's no such thing as too much information when it comes to your dog!</p>
+          </div>
+
+          <div class="form-group">
+            <label for="how-heard">How did you hear about LittleWoofs?</label>
+            <select id="how-heard" name="how_heard">
+              <option value="">Select…</option>
+              <option value="wordofmouth">Word of mouth / recommendation</option>
+              <option value="facebook">Facebook</option>
+              <option value="businesscard">Business card</option>
+              <option value="google">Google search</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">Send Enquiry 🐾</button>
+          <div id="successMsg" class="success-msg">
+            🐕 Message received! Andrea will be in touch within 24 hours to arrange a free meet-and-greet.
+          </div>
+          <p class="privacy-note">Your details are only used to respond to your enquiry. LittleWoofs will never share your information with anyone else.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="js/components.js"></script>
+<script>
+  buildPage('contact.html');
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const msg = document.getElementById('successMsg');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    // ✏️ Connect to a real form handler here — Formspree, Netlify Forms, or EmailJS
+    // Example Formspree: change action="https://formspree.io/f/YOUR_ID" and remove this JS
+    setTimeout(function() {
+      btn.style.display = 'none';
+      msg.style.display = 'block';
+    }, 800);
+  });
+</script>
+</body>
+</html>

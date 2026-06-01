@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — LittleWoofs Dog Walking</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-header { background: linear-gradient(135deg, var(--grass-light), var(--sky-light)); padding: 4rem 0 3rem; text-align: center; }
+    .gallery-section { background: var(--white); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .gallery-tile {
+      aspect-ratio: 1/1; border-radius: var(--r-md); overflow: hidden;
+      background: linear-gradient(145deg, var(--grass-light), var(--sky-light));
+      border: 2px dashed var(--border); display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 0.4rem;
+      font-size: 0.75rem; font-weight: 700; color: var(--grass-dark);
+      text-align: center; padding: 1rem; cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .gallery-tile:hover { transform: scale(1.02); box-shadow: var(--shadow-md); }
+    .gallery-tile img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery-tile .tile-icon { font-size: 2rem; }
+    .gallery-tile .tile-label { font-size: 0.72rem; color: var(--grass-dark); font-weight: 700; }
+    @media (max-width: 600px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+<div class="page-header">
+  <div class="container">
+    <span class="section-label">Happy days out</span>
+    <h1>Gallery</h1>
+    <p style="font-family:'Lora',serif;color:var(--text-muted);max-width:480px;margin:0 auto;">Photos from walks, adventures, and tail-wagging moments with the LittleWoofs pack.</p>
+    <div class="edit-note" style="margin:1.25rem auto 0;max-width:500px;justify-content:center;">✏️ Replace all placeholder tiles with real photos. Even 6 good photos transform this page. Check your Facebook — those photos are perfect for this!</div>
+  </div>
+</div>
+<section class="gallery-section">
+  <div class="container">
+    <div class="gallery-grid">
+      <!-- ✏️ To add a real photo: replace the tile content with <img src="images/your-photo.jpg" alt="Description"> -->
+      <div class="gallery-tile"><div class="tile-icon">🐕</div><div class="tile-label">📸 Add a walk photo<br>images/walk-01.jpg</div></div>
+      <div class="gallery-tile"><div class="tile-icon">🌳</div><div class="tile-label">📸 Park adventure<br>images/walk-02.jpg</div></div>
+      <div class="gallery-tile"><div class="tile-icon">🦮</div><div class="tile-label">📸 Group walk<br>images/walk-03.jpg</div></div>
+      <div class="gallery-tile"><div class="tile-icon">🐾</div><div class="tile-label">📸 Happy paws<br>images/walk-04.jpg</div></div>
+      <div class="gallery-tile"><div class="tile-icon">🌞</div><div class="tile-label">📸 Sunny day<br>images/walk-05.jpg</div></div>
+      <div class="gallery-tile"><div class="tile-icon">🍂</div><div class="tile-label">📸 Autumn walk<br>images/walk-06.jpg</div></div>
+      <div class="gallery-tile"><div class="tile-icon">💚</div><div class="tile-label">📸 Andrea + a dog<br>images/andrea-01.jpg</div></div>
+      <div class="gallery-tile"><div class="tile-icon">🐶</div><div class="tile-label">📸 Close-up portrait<br>images/dog-portrait.jpg</div></div>
+      <div class="gallery-tile" style="background:var(--coral-light);border-color:var(--coral);">
+        <div class="tile-icon">📱</div>
+        <div class="tile-label" style="color:var(--coral-dark);">Follow on Facebook for more photos → LittleWoofsThamesmead</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="https://www.facebook.com/LittleWoofsThamesmead/" class="btn btn-facebook" target="_blank">See more photos on Facebook →</a>
+    </div>
+  </div>
+</section>
+<script src="js/components.js"></script>
+<script>buildPage('gallery.html');</script>
+</body>
+</html>

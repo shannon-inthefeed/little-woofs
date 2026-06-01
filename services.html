@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LittleWoofs dog walking services and pricing in Thamesmead, Barking & Dagenham. Group walks, solo walks, and drop-in visits. MDWA certified.">
+  <title>Services &amp; Pricing — LittleWoofs Dog Walking</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-header {
+      background: linear-gradient(135deg, var(--sky-light) 0%, var(--grass-light) 100%);
+      padding: 4rem 0 3rem; text-align: center;
+    }
+    .page-header h1 { margin-bottom: 0.75rem; }
+    .page-header p  { max-width: 520px; margin: 0 auto; font-family: 'Lora', serif; font-size: 1.05rem; }
+
+    /* SERVICE CARDS */
+    .services-section { background: var(--white); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; }
+    .service-card {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: var(--r-lg); overflow: hidden;
+      box-shadow: var(--shadow-sm); transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .sc-header {
+      padding: 2rem 1.75rem 1.25rem;
+    }
+    .sc-header.grass { background: var(--grass-light); border-bottom: 3px solid var(--grass); }
+    .sc-header.sky   { background: var(--sky-light);   border-bottom: 3px solid var(--sky); }
+    .sc-header.coral { background: var(--coral-light); border-bottom: 3px solid var(--coral); }
+    .sc-icon { font-size: 2.8rem; margin-bottom: 0.5rem; display: block; }
+    .sc-header h2 { font-size: 1.3rem; margin-bottom: 0.25rem; }
+    .sc-tagline { font-size: 0.85rem; color: var(--text-muted); font-family: 'Lora', serif; font-style: italic; }
+    .sc-body { padding: 1.5rem 1.75rem; }
+    .sc-price-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 1rem; }
+    .sc-price { font-size: 2.4rem; font-weight: 900; color: var(--dark); line-height: 1; }
+    .sc-per { font-size: 0.88rem; color: var(--text-muted); font-weight: 600; }
+    .sc-desc { font-size: 0.9rem; font-family: 'Lora', serif; line-height: 1.75; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .sc-includes { list-style: none; margin-bottom: 1.25rem; }
+    .sc-includes li {
+      display: flex; align-items: flex-start; gap: 0.5rem;
+      font-size: 0.84rem; padding: 0.3rem 0; color: var(--text);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .sc-includes li:last-child { border-bottom: none; }
+    .sc-check { color: var(--grass); font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+
+    /* WELFARE APPROACH */
+    .welfare-section { background: var(--dark); color: var(--white); }
+    .welfare-section .section-label { color: var(--grass); }
+    .welfare-section .section-title { color: var(--white); }
+    .welfare-section .section-sub { color: rgba(255,255,255,0.6); }
+    .welfare-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
+    .welfare-card {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--r-md); padding: 1.5rem; text-align: center;
+    }
+    .welfare-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    .welfare-card h4 { font-size: 0.9rem; color: var(--white); margin-bottom: 0.35rem; }
+    .welfare-card p  { font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+    /* AREA */
+    .area-section { background: var(--grass); padding: 3rem 0; }
+    .area-inner { text-align: center; }
+    .area-inner h2 { color: var(--white); margin-bottom: 0.5rem; }
+    .area-inner p  { color: rgba(255,255,255,0.8); font-family: 'Lora', serif; margin-bottom: 1.25rem; }
+    .area-chips { display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; }
+    .area-chip {
+      background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3);
+      color: var(--white); padding: 0.35rem 1rem; border-radius: var(--r-pill);
+      font-size: 0.82rem; font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="container">
+    <span class="section-label">What Andrea offers</span>
+    <h1>Services &amp; Pricing</h1>
+    <p>Simple, transparent pricing — no hidden fees, no surprises. All bookings begin with a free meet-and-greet.</p>
+  </div>
+</div>
+
+<!-- SERVICE CARDS -->
+<section class="services-section" aria-labelledby="services-h">
+  <div class="container">
+    <div class="services-grid">
+
+      <!-- GROUP WALK -->
+      <div class="service-card">
+        <div class="sc-header grass">
+          <span class="sc-icon">🦮</span>
+          <h2>Group Dog Walk</h2>
+          <p class="sc-tagline">A sociable adventure with carefully matched companions</p>
+        </div>
+        <div class="sc-body">
+          <div class="sc-price-row">
+            <span class="sc-price">£12</span>
+            <span class="sc-per">per walk</span>
+          </div>
+          <div class="edit-note">✏️ Set your exact price. Offer a 5-walk bundle? Add a "£55 for 5 walks" note here.</div>
+          <p class="sc-desc">A walk in local green spaces with a small, carefully matched group of dogs. Andrea keeps groups to a maximum of 4 — so every dog is known by name, not lost in a crowd.</p>
+          <div class="edit-note">✏️ Which parks and routes do you use? Thamesmead Green, Lesnes Abbey, Central Park Dagenham? Adding specific local names makes this feel real and local.</div>
+          <ul class="sc-includes">
+            <li><span class="sc-check">✔</span> Maximum 4 dogs per group</li>
+            <li><span class="sc-check">✔</span> Photo and update after every walk</li>
+            <li><span class="sc-check">✔</span> Welfare-first, positive handling throughout</li>
+            <li><span class="sc-check">✔</span> Fully insured</li>
+            <li><span class="sc-check">✔</span> Walk duration: approx. 60 minutes <span style="font-size:0.75rem;color:var(--text-muted)">✏️ Confirm this</span></li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Enquire about this service</a>
+        </div>
+      </div>
+
+      <!-- SOLO WALK -->
+      <div class="service-card">
+        <div class="sc-header sky">
+          <span class="sc-icon">🐾</span>
+          <h2>Solo Dog Walk</h2>
+          <p class="sc-tagline">One-to-one, for dogs who need it most</p>
+        </div>
+        <div class="sc-body">
+          <div class="sc-price-row">
+            <span class="sc-price">£15</span>
+            <span class="sc-per">per walk</span>
+          </div>
+          <div class="edit-note">✏️ Add or remove this service. If you don't currently offer it, either hide this card or mark it "coming soon".</div>
+          <p class="sc-desc">For dogs who prefer their own company, are in early training, have anxiety around other dogs, or simply need extra care and gentle handling. Just your dog, and Andrea.</p>
+          <ul class="sc-includes">
+            <li><span class="sc-check">✔</span> Andrea's full, undivided attention</li>
+            <li><span class="sc-check">✔</span> Ideal for anxious or reactive dogs</li>
+            <li><span class="sc-check">✔</span> Gentle, patient handling throughout</li>
+            <li><span class="sc-check">✔</span> Photo and update after every walk</li>
+            <li><span class="sc-check">✔</span> Fully insured</li>
+          </ul>
+          <a href="contact.html" class="btn btn-sky" style="width:100%;justify-content:center;">Enquire about this service</a>
+        </div>
+      </div>
+
+      <!-- DROP-IN -->
+      <div class="service-card">
+        <div class="sc-header coral">
+          <span class="sc-icon">🏠</span>
+          <h2>Drop-In Visit</h2>
+          <p class="sc-tagline">A welfare check, feed, and fuss at your home</p>
+        </div>
+        <div class="sc-body">
+          <div class="sc-price-row">
+            <span class="sc-price">£10</span>
+            <span class="sc-per">per visit</span>
+          </div>
+          <div class="edit-note">✏️ Confirm this price. Duration — 30 min? What exactly do you cover — medication, litter, small pets?</div>
+          <p class="sc-desc">When your dog can't be walked that day, or you just need someone to pop in — Andrea will check in, top up water and food, and give your dog the company and fuss they deserve.</p>
+          <ul class="sc-includes">
+            <li><span class="sc-check">✔</span> Feeding and fresh water</li>
+            <li><span class="sc-check">✔</span> Playtime and companionship</li>
+            <li><span class="sc-check">✔</span> Short garden toilet break if applicable</li>
+            <li><span class="sc-check">✔</span> Update message and photo after every visit</li>
+            <li><span class="sc-check">✔</span> Small pets also welcome <span style="font-size:0.75rem;color:var(--text-muted)">✏️ Confirm</span></li>
+          </ul>
+          <a href="contact.html" class="btn btn-coral" style="width:100%;justify-content:center;">Enquire about this service</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:2.5rem; background:var(--cream); border-radius:var(--r-lg); padding:1.75rem; border:1.5px solid var(--border); max-width:680px; margin-left:auto; margin-right:auto;">
+      <h3 style="font-size:1rem;margin-bottom:0.5rem;">📋 All services include a free meet-and-greet</h3>
+      <p style="font-size:0.88rem;line-height:1.7;font-family:'Lora',serif;">Before any booking begins, Andrea comes to meet you and your dog at home — free, no obligation. She'll go through your dog's routine, health, behaviour, and emergency contacts, and if everyone is happy, arrange a trial walk.</p>
+      <a href="onboarding.html" style="display:inline-block;margin-top:0.75rem;font-size:0.85rem;color:var(--grass-dark);font-weight:700;text-decoration:none;">See how the onboarding process works →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WELFARE APPROACH -->
+<section class="welfare-section" aria-labelledby="welfare-h">
+  <div class="container">
+    <span class="section-label">The LittleWoofs approach</span>
+    <h2 class="section-title" id="welfare-h">Welfare-first means what it says</h2>
+    <p class="section-sub">These are the standards Andrea holds herself to on every single walk, with every single dog.</p>
+    <div class="welfare-grid">
+      <div class="welfare-card">
+        <div class="welfare-icon">🐕</div>
+        <h4>Your dog is known as an individual</h4>
+        <p>Andrea learns each dog's personality, triggers, preferences, and quirks before they join any group.</p>
+      </div>
+      <div class="welfare-card">
+        <div class="welfare-icon">🌿</div>
+        <h4>No aversive methods — ever</h4>
+        <p>No choke chains, no shock collars, no harsh corrections. Positive reinforcement only.</p>
+      </div>
+      <div class="welfare-card">
+        <div class="welfare-icon">👥</div>
+        <h4>Groups capped at 4 dogs</h4>
+        <p>Small groups aren't just a feature — they're a commitment to giving every dog proper care and attention.</p>
+      </div>
+      <div class="welfare-card">
+        <div class="welfare-icon">🛡️</div>
+        <h4>Your dog's safety is non-negotiable</h4>
+        <p>Safe routes, secure leads, appropriate matches between dogs. Andrea doesn't take shortcuts.</p>
+        <div class="edit-note" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.6);">✏️ Add anything else specific to your safety practice here</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area-section" aria-labelledby="area-h">
+  <div class="area-inner container">
+    <h2 id="area-h">🗺️ Service area</h2>
+    <p>Currently serving these areas of South and East London</p>
+    <div class="area-chips">
+      <span class="area-chip">Thamesmead</span>
+      <span class="area-chip">Barking</span>
+      <span class="area-chip">Dagenham</span>
+      <span class="area-chip">Abbey Wood</span>
+      <span class="area-chip">Plumstead</span>
+      <span class="area-chip">Erith (enquire)</span>
+    </div>
+    <div class="edit-note" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.35);color:rgba(255,255,255,0.9);margin-top:1rem;display:inline-flex;">
+      ✏️ Adjust these chips to match exactly where you walk. Remove any you don't cover.
+    </div>
+    <div style="margin-top:1.5rem;">
+      <a href="contact.html" class="btn" style="background:var(--white);color:var(--grass-dark);">Check if I cover your area →</a>
+    </div>
+  </div>
+</section>
+
+<script src="js/components.js"></script>
+<script>buildPage('services.html');</script>
+</body>
+</html>
